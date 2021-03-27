@@ -12,3 +12,17 @@ corresponding to rows from the Supplier and Category tables.  Paste your three S
 (5) Update the two top rows of the Products Table to increase the price by 1.50. (Get SQL to do the addition for you.)  Paste your SQL statement below.
 
 (6) Delete all rows of the Products Table where the price is less than 7.00. Paste your SQL statement below.
+
+SELECT CustomerName, ContactName, Country FROM Customers ORDER BY Country LIMIT 10 OFFSET 10;
+
+SELECT * FROM Customers WHERE ContactName LIKE "A%";
+
+SELECT * FROM OrderDetails WHERE ProductID = 51 AND quantity > 10;
+
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, Unit, Price) VALUES (NULL, "Pepsi", 27, 1, "24 - 12 oz bottles", 20), (NULL, "Fanta", 27, 1, "24 - 12 oz bottles", 20), (NULL, "Sprite", 27, 1, "24 - 12 oz bottles", 20);
+
+UPDATE Products set Price = Products.Price + 1.50 WHERE ProductID IN (1,2);
+
+DELETE FROM Products WHERE Price < 7.00;
+
+
